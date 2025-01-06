@@ -469,8 +469,8 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    padding-top: 188px;
-    margin-bottom: 47px;
+   
+    margin-bottom: 72px;
     margin-left: auto;
     margin-right: auto;
     max-width: 216px;
@@ -481,10 +481,7 @@ button {
     font-size: 56px;
     max-width: 496px;
     margin-bottom: 36px;
-    min-width: 496px;
-      }
-      
-    }
+     }
 
 }
 
@@ -525,18 +522,40 @@ button {
 
 
 .our-benefits {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    
 }
+
+@media screen and (min-width: 1158px) {
+    .our-benefits {
+                padding-top: 120px;
+                padding-bottom: 120px;
+            }
+        }
 
 .benefits-list {
     display: flex;
-    gap: 24px;
-    ;
+    flex-direction: column;
+    gap: 72px;
+    /* gap: 24px; */
+    ;}
 
+@media screen and (min-width: 768px) {
+    .benefits-list {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 72px; 
+            column-gap: 24px;           ;
+        }
+
+.benefits-icons-item {
+            display: none;
 }
 
-.benefits-icons {
+@media screen and (min-width: 1158px) {
+.benefits-icons-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -546,21 +565,41 @@ button {
     height: 112px;
     background: #f4f4fd;
     margin-bottom: 8px;
+  }
 }
 
 
-.benefits-list-item {
+
+/* .benefits-list-item {
     width: calc((100% - 72px) / 4);
-}
+} */
 
-.benefits-item-title {
+@media screen and (min-width: 768px) {
+    .benefits-list-item {
+        width: calc((100% - 72px) / 2);
+    } 
+
+    
+}
+    
+    .benefits-item-title {
     margin-bottom: 8px;
+    /* font-weight: 500; */
     font-weight: 500;
-    font-size: 20px;
+    /* font-size: 20px; */
+    font-size: 36px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+.benefits-item-title { 
+    text-align: left;}
+}
+
+
 
 .benefits-item-discr {
     font-weight: 400;
@@ -581,14 +620,7 @@ button {
     gap: 24px;
 }
 
-.team-card {
-    background-color: #ffffff;
-    /* width: calc((100% - 72px) / 4); */
-    border-radius: 0 0 4px 4px;
-    width: 264px;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    background: #fff;
-}
+
 
 
 .our-time-container {
