@@ -39,7 +39,7 @@ p {
 a {
     text-decoration: none;
     color: currentColor;
-  
+
 }
 
 img {
@@ -48,11 +48,11 @@ img {
     height: auto;
 }
 
-
 /* common */
 button {
     cursor: pointer;
 }
+
 .container {
     max-width: 320px;
     padding: 0 16px;
@@ -64,23 +64,28 @@ button {
         max-width: 768px;
     }
 }
-  
+
 
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
-        padding: 0 15px;
-        
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
-      /* Heder */
 
+/* Heder */
 
 .page-heder {
     padding-top: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+
+.heder-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media screen and (max-width: 767px) {
@@ -90,24 +95,31 @@ button {
     }
 }
 
-
-.heder-container {
+/* .heder-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: relative;
-  }
 
-.heder-nav {
-      display: flex;
-      align-items: center;
-    }
-
-    /* #region Heder */
+} */
+/* .heder-logo {
+      padding: 24px 0;
+      margin-right: 76px;
+  } */
 
 
 
-      
+
+
+.nav-btn-mobile {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    fill: #2F2F37;
+}
+
+
+
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -118,29 +130,35 @@ button {
     color: #4d5ae5;
 }
 
-.heder-logo {
-    padding: 24px 0;
-    margin-right: 76px;
-}
-
-
 .heder-logo .logo-part {
     color: #2e2f42;
 }
 
 
+.heder-nav {
+    display: flex;
+    align-items: center;
+}
 
-      /* Navigation */
+
+/* Navigation */
 
 .nav-list {
     display: none;
 }
 
+.contacts {
+    display: none;
+}
+
+
 @media screen and (min-width: 768px) {
-    .nav-list {
+
+    .nav-list,
+    .contacts {
         display: flex;
-        align-items: center;
         gap: 40px;
+
     }
 }
 
@@ -162,88 +180,3 @@ button {
 .nav-link:focus {
     color: #404bbf;
 }
-
-.activ::after {
-    content: "";
-    border-radius: 2px;
-    width: 48px;
-    height: 4px;
-    background: #404bbf;
-    display: block;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-
-}
-
-.activ {
-    color: #404bbf;
-}
-
-
- .contacts {
-     font-style: normal;
-     margin-left: auto;
- }
-
-.contacts-list {
-    display: none;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1157px) {
-.contacts-list {
-    display: block;
-    align-items: center;
-    padding: 0;
-    gap: 12px;
-  }
-}
-
-@media screen and (min-width: 1158px) {
-    .contacts-list {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-    }
-}
-
-
-.contacts-link {
-    display: block;
-    padding: 24px 0;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts-link:hover,
-.contacts-link:focus {
-    color: #404bbf;
-}
-
-
-
-
-
-.nav-btn-mobile {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    line-height: 0;
-    fill: #2F2F37;
- }
-
- @media screen and (min-width: 768px) {
-.nav-btn-mobile {
-    display: none;
-}
- } 
-
- /* #endregion */
-
-
