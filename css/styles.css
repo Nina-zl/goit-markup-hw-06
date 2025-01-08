@@ -950,7 +950,8 @@ font-weight: 400;}
 .footer-cont {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: center;
+   
    gap: 72px;
 } 
 
@@ -1024,7 +1025,8 @@ margin-top: 16px;
 }
 
 @media screen and (min-width: 768px) {
-.container-social {  
+.container-social { 
+    align-items: flex-start; 
    text-align: left;
  }
 } 
