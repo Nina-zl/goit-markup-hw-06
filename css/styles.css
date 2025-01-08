@@ -283,19 +283,20 @@ button {
  }
  /* #endregion */
 
-           /* header-mobile-menu  */
+ /* header-mobile-menu  */
 
     .mobile-menu {       
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 900px;
+    height: 100%; 
     background-color: #fff;
     padding: 72px 16px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: space-between;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -303,7 +304,7 @@ button {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-menu .is-open {
+.mobile-menu.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -334,7 +335,7 @@ button {
     fill: #fff;
 }
 
-.menu-close-btn-icon {
+.mobile-menu-social-item {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -343,9 +344,9 @@ button {
     fill: #fff;
 }
 
-.mobile-menu-nav {
+ .mobile-menu-nav {
     margin-bottom: auto;
-}
+} 
 
 .mobile-menu-nav-link {
     font-weight: 700;
@@ -353,15 +354,17 @@ button {
     line-height: 1.11;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 48px;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-menu-nav-item {
+.mobile-menu-item {
     padding-bottom: 40px;
 }
 
 .mobile-menu-cont {
+    gap: 24px;
     margin-bottom: 48px;
 }
 
@@ -370,6 +373,7 @@ button {
 }
 
 .mobile-menu-cont-link {
+  
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -1081,6 +1085,7 @@ align-items: center;
     top: 0;
     left: 0;
     z-index: 999999;
+    opacity: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
@@ -1090,6 +1095,7 @@ align-items: center;
 .backdrop.is-open {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
 }
 
 
